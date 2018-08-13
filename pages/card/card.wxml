@@ -1,0 +1,40 @@
+<!--pages/card/card.wxml-->
+<view class="container">
+   <view class='title'>添加绑定卡</view>
+   <view class="input-box">       
+        <input value='{{input}}' type='text' placeholder='请扫描二维码'  disabled="{{false}}" />
+        <view class='saoma' bindtap='saoma'>
+          <image src='{{src1}}'></image>
+        </view>
+   </view>
+   <!-- 绑定新卡 -->
+    <view class='addCard'>
+        <text>绑定新卡</text>
+        <form class='form' bindsubmit="formSubmit">
+            <input placeholder='请输入要绑定的卡号' name='userCardId'></input>
+            <button size='mini' type='primary' formType="submit">确定</button>
+        </form>
+    </view>
+   <!--  -->
+   <view class='tishi'>绑定卡后，您的余额就可以通过卡片与家人共享啦~</view>
+   <view class='title'>已绑定卡</view> 
+   <block wx:if="{{true}}">   
+        <view class='listbox'>
+            <view class='list' wx:for='{{card}}' wx:key='card'>                                      
+                <view class='number'>{{item.userCardId}}</view>
+                <view class='list-btn' bindtap='jieb' data-card='{{item.userCardId}}' data-id='{{item.id}}'>
+                    <span>解绑</span>
+                </view>
+                <image src='{{src3}}' class='images2'></image>      
+            </view>
+        </view>
+ 
+   </block>  
+
+    <block wx:if="{{hidden}}">
+        <view class='nodata'>
+            <image src='{{src2}}'></image>
+            <p>暂无绑定卡</p>
+        </view>
+    </block>
+</view>   

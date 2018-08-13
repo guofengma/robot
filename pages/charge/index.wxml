@@ -1,0 +1,28 @@
+<!--pages/charge/index.wxml-->
+<view class="container">
+
+    <!-- <view class="title">请输入充值金额</view>
+    <view class="input-box">
+        <input bindinput="bindInput" />
+    </view> -->
+
+    <view class="title">选择充值金额</view>
+    <view class='addbox' >
+        <view class="flex-wrp" wx:for='{{displayNums}}' wx:key='item'>
+              <view class="flex-item  {{index==id?'cur':''}}" bindtap="choosemoney" data-sort='{{item.amount}}' data-free='{{item.send}}' data-id='{{index}}'>
+                  <b>{{item.amount}}</b>
+                  <span>元</span>
+                  <p class='sai' style="{{item.send==0?'display:none':'display:block'}}">送{{item.send}}</p>
+              </view>              
+        </view>
+    </view>
+
+    <view class='tishi'>
+     <text>温馨提示：充值金额越大赠送金额越多</text>
+    </view> 
+
+    <button bindtap="charge" class="btn-login"  disabled="{{disabled}}">立即充值</button>
+   
+
+   
+</view>

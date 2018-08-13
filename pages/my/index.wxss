@@ -1,0 +1,114 @@
+/* pages/my/index.wxss */
+.user-info{ 
+  width: 100%; 
+  float: left;  
+  /* background: -webkit-linear-gradient(top, #3c89ef,#fff);   */
+   background-color:#3c89ef; 
+   margin-bottom: 28rpx;
+}
+.border-top{
+  border-top: #dadada solid 1px;
+}
+.border-bottom{
+  border-bottom: #dadada solid 1px;
+}
+.user-info image.user-img{
+  float: left;
+	width: 110rpx;
+	height: 110rpx;
+	margin: 60rpx 32rpx 60rpx 52rpx;
+  border: #96bef6 solid 2px;
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+.user-info text{
+  width: 60%;
+  float: left;  
+	text-align: left;
+  margin-top: 60rpx;
+  color: #fff;
+}
+.user-info .detail{
+  padding-top: .5rem;
+  width: 60%;
+  float: left;
+  font-size: .8rem;
+  color: #fff;
+}
+.overage-amount{
+  display: block;
+  font-size: 1rem;
+  text-align: left
+}
+.btn-login{
+	position: absolute;
+	bottom: 60rpx;
+	width: 80%;
+	left: 50%;
+	margin-left: -40%;
+  border-radius: 50px;
+  box-shadow:0 10px 10px #ccc;  
+}
+button[type=warn]{
+  background-color: #3c89ef
+}
+.gray{
+	background-color: #ccc;
+}
+
+.my-wallet i{
+  position: absolute;
+  width: 40rpx;
+  height: 100%;
+}
+.tapbar {
+  padding: 30rpx 40rpx
+}
+.tapbar text{
+  text-indent: 40px;  
+}
+.icon{
+  position: absolute;
+  width: 32px;
+  height: 32px;
+}
+.c-g{
+	padding-top: -5rpx;
+	padding-right: 30rpx;
+  font-size: .8rem;
+  color: #666
+}
+.btn-charge{
+  width: 80%;
+  border-radius: 50px;
+  box-shadow:0 10px 10px #96bef6;
+}
+.my-ticket{
+  padding: 30rpx 0 30rpx 0;
+  margin-left: 50rpx;
+  border-top:#dadada solid 1px;
+}
+.my-ticket .icon{
+  margin-left: -8rpx;
+}
+.my-ticket text{
+  text-indent: 36px;  
+}
+.bg{
+  width: 100%;
+  position: relative;
+  float: left;
+  background: #fff;
+  border-bottom:#dadada solid 1px;
+}
+.icon-trangel{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  z-index: 3;
+  display: block
+}
+.card{ 
+  margin-top: 30rpx;
+}

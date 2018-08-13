@@ -1,0 +1,100 @@
+/* pages/record/record.wxss */
+.container{
+	background-color: #f2f2f2;
+	height: 100%;
+}
+.title{
+  width: 100%;
+  position: fixed;
+  top:0;
+  z-index: 2
+}
+.title span{
+  padding: 25rpx 0 25rpx 0;
+  margin-right: 60rpx;
+}
+.title span.cur{
+  border-bottom:#3c89ef solid 2px;
+}
+.title span.curs{
+  border-bottom:0
+}
+.listbox{
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  z-index: 1;
+  padding-top: 3rem;
+}
+.listbox .list{
+  width: 90%;
+  background: #fff;
+  margin: 0 auto;
+  position: relative;
+  padding: 2% 0;
+  font-size: 1rem;
+  border-bottom: #dadada solid 1px;
+}
+.listbox .list .name{
+  padding: 0 2%;
+  width: 100%;
+  overflow: hidden;
+  white-space:nowrap;
+  word-break:keep-all;
+  text-overflow:ellipsis;
+  font-size: .8rem;
+  color: #333
+}
+.listbox .list .name small{
+  font-size: .8rem;
+  color: #666
+}
+ .listbox .list .state{
+  padding: 0 2%;
+  width: 100%;
+  overflow: hidden;
+  white-space:nowrap;
+  word-break:keep-all;
+  text-overflow:ellipsis;
+  font-size: 1rem
+}
+ .listbox .list .state span{
+  position: relative;
+  float: left;
+  width: 100%;
+  font-size: 1rem;
+  text-align: left;
+  color: #333
+}
+ .listbox .list .state span.type{
+  padding-top: 5%;
+  font-size: 0.9rem;
+  color: #333  
+}
+ .listbox .list .state span b{
+  font-weight: bolder;
+  font-size: 1rem;
+  color: #3c89ef
+}
+
+.nodata{
+  margin-top: 10vh;
+  width: 100%;
+  text-align: center
+}
+.nodata image{
+  width: 20%;
+  height: 11vh;
+}
+.nodata p{
+  width:100%;
+  float: left;
+  font-size: .8rem;
+}
+.showmore{
+  text-align: center;
+  color: #666;
+  font-size: .8rem;
+  padding: 3vh 0;
+  background: #fff
+}

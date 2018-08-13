@@ -1,0 +1,68 @@
+<!--pages/charchoosege/index.wxml-->
+
+<view class="container">
+
+ 
+  <view class="addbox addbox2">
+      <view class='title' style='border:0;padding-bottom:5rpx'>设备名称：{{name}}</view> 
+      <view class='title' style='border:0;	padding: 0 0 30rpx 50rpx;font-size: .8rem;'>设备编号：{{sbbh}} <em style='padding-left:.5rem'>空闲插座：{{productnum}}个</em></view>    
+  </view> 
+  <view class='addbox'>
+       <view class="title">选择充电插座：<span>{{sort}}</span>号</view> 
+       <scroll-view scroll-x="true" class='box-sizing'>
+          <view class="flex-wrp" wx:for="{{products}}" wx:key="products">
+                <view class="flex-item {{index==id?'cur':'cur2'}}" bindtap="choosenum" data-sort='{{item.sid}}' 
+                data-id='{{index}}'>
+                      <image src='{{src1}}' class='src1'></image>
+                      <image src='{{src1s}}'  class='src1s'></image>
+                      <p class='sai'><b>{{item.sid}}</b>号</p>
+                </view>
+          </view> 
+      </scroll-view>
+  </view> 
+
+<view class="addbox" style='border-top:#dadada solid 1px;'> 
+  <picker bindchange="bindPickerChange" value="{{pickerindex}}" range="{{picker}}" range-key="{{'work'}}" >
+    <view class="picker">
+      <span class='picspan'><em>当前选择：</em>{{picker[pickerindex].work}}</span>
+      <span style="{{typep==0?'display:block':'display:none'}}">分钟</span>
+      <span style="{{typep==1?'display:block':'display:none'}}">度</span>
+      <span>/{{picker[pickerindex].money/100}}元</span>
+      <span style="{{typep==1?'display:block':'display:none'}}">(≈{{picker[pickerindex].ele_minite}}分钟)</span>
+      <image src='{{src2}}'></image>
+    </view>    
+  </picker>
+</view>
+
+<view class="addbox addbox2">
+  <view class="title {{dicount==1?'dazhe':'nodazhe'}}">
+      结算：
+      <em><span>{{dismoney}}</span>元</em>
+      <abbr><span>{{addmoney}}</span>元</abbr>
+      <span class='tishi'>(充满自动断电，剩余金额原路退回)</span>
+  </view>
+</view> 
+
+<view class='addbox'>
+     <view class="title">选择支付方式：</view>
+
+     <view class='paystyle'>               
+        <view class='qian'>
+          <b ><em>{{money}}</em>元 </b>
+          <span bindtap='tiaochong' class='charge'>  去充值→</span>
+        </view>        
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label  class="radio"  wx:for="{{items}}"  wx:key="items">
+            <image src=" {{radio==item.name?radio2:radio1}}" class='radioimg'></image>
+            <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+          </label>
+        </radio-group>
+        
+    </view> 
+  </view>    
+
+       
+<form bindsubmit="charge"  report-submit='true'>
+  <button form-type="submit" class="btn-charge" disabled="{{disabled}}">确定</button>
+  </form> 
+</view>

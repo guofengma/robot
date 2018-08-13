@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <map id="myMap" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" bindregionchange="bindregionchange"bindtap="mapclick" polyline="{{polyline}}" markers="{{markers}}" controls="{{controls}}" bindmarkertap="bindmarkertap"  bindcontroltap="bindcontroltap" show-location>
+
+  <cover-view class='listbox' wx:if="{{hidden}}">
+    <cover-view  class='list'>
+          <cover-view class='left' bindtap='chong' data-ck="{{ck}}"data-sum="{{sum}}">              
+              <cover-view class='name' >{{name}}</cover-view> 
+              <cover-view class='address'>{{address}}</cover-view>
+              <cover-view class='address enable'>空闲插座：{{sum}}个</cover-view>
+          </cover-view>
+          <cover-view class='longline'></cover-view>
+          <cover-view class='leader' bindtap='go' data-marker='{{location}}' data-name='{{name}}' data-address='{{address}}'>
+              <cover-image src='{{src1}}'></cover-image>              
+              <cover-view class='distance'>{{distance}}m</cover-view>
+          </cover-view> 
+    </cover-view> 
+</cover-view>
+</map>
+</view>

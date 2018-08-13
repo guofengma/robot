@@ -1,0 +1,20 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/card/card",
+    "pages/my/index",    
+    "pages/list/list",    
+    "pages/charge/index",
+    "pages/logs/logs",
+    "pages/record/record",
+    "pages/choose/choose"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3c89ef",
+    "navigationBarTitleText": "摩灿 共享充电",
+    "navigationBarTextStyle":"white"
+  }
+}

@@ -1,0 +1,38 @@
+<!--pages/record/index.wxml-->
+<block wx:if="{{true}}">
+<view class="container">
+   <view class='title' >
+        <span class="{{tabs==0?'cur':'curs'}}" data-tab='0'  bindtap='tab'>消费记录</span>
+        <span class="{{tabs==1?'cur':'curs'}}"  data-tab='1'  bindtap='tab'>充值记录</span>
+   </view>  
+   <view class='listbox' wx:if="{{tab1}}">
+          <view wx:for="{{array}}" class='list' wx:key="{{item}}">              
+               <view class='state'><span>{{item.state==0?'取消支付':'支付成功'}}</span></view> 
+               <view class='state'><span><b>+{{item.money/100}}</b>元</span></view>   
+               <view class='name'><small>支付方式：</small>{{item.payType}}</view>
+               <view class='name'><small>交易时间：</small>{{item.inTime}}</view>
+               <view class='name'><small>交易编号：</small>{{item.cid}}</view>  
+         </view> 
+    </view>
+    <view class='listbox'  wx:if="{{tab2}}">
+          <view wx:for="{{array2}}" class='list' wx:key="{{item}}">              
+               <view class='state'><span>{{item.payWay}}</span></view> 
+               <view class='state'><span><b>-{{item.totalFee/100}}</b>元</span></view> 
+               <view class='name'><small>设备编号：</small>{{item.sn}}</view>
+               <view class='name' style="{{item.electric!=''?'display:block':'display:none'}}"><small>使用电量：</small>{{item.electric}}瓦秒</view>
+               <view class='name'><small>充电时间：</small>{{item.workTime}}<em style="{{item.electric!=''?'display:none':'display:inline-block'}}">分钟</em></view>
+               <view class='name'><small>交易时间：</small>{{item.startTime}}</view>
+               <view class='name'><small>交易编号：</small>{{item.cid}}</view>  
+         </view> 
+    </view>
+    <view class='showmore' bindtap='showmore' wx:if="{{showdes}}" >↓点击查看更多</view>
+    <view class='showmore' style="{{showdes==true?'display:none':'display:block'}}">{{none}}</view>
+</view>
+</block>
+<block wx:if="{{hidden}}">
+       <view class='nodata'>
+          <image src='{{src2}}'></image>
+          <p>暂无数据</p>
+      </view>
+</block>  
+

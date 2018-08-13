@@ -1,0 +1,44 @@
+<!--pages/my/index.wxml-->
+<view class="container">
+    <view class="user-info">    
+        <block wx:if="{{userInfo.avatarUrl != ''}}">
+            <image src="{{userInfo.avatarUrl}}" class='user-img'></image>        
+        </block>
+        <text wx:if="{{userInfo.avatarUrl !=''}}">{{userInfo.nickName}}</text>        
+        <abbr class='detail'  wx:if="{{userInfo.avatarUrl !=''}}">余额：{{overage}}元</abbr>          
+    </view>
+    
+    <block wx:if="{{userInfo.avatarUrl != ''}}">
+    <view class='big-box'>
+        <view class='bg'>        
+            <view class="my-wallet tapbar border-top" bindtap='detail'>
+                <image src='{{srcqian}}' class='icon'></image>
+                <text>我的钱包</text>
+                <text class="c-g">明细</text>  
+                <image src='{{srctrangel}}' class='icon-trangel'></image>   
+            </view>
+            <view bindtap="movetoCharge" class="my-ticket tapbar">
+                <image src='{{srcchong}}' class='icon'></image> 
+                <text>充值</text>        
+                <image src='{{srctrangel}}' class='icon-trangel'></image>
+            </view>
+            <view bindtap="showTicket" class="my-ticket tapbar"  data-tiao='{{ticket}}'>
+                <image src='{{srcrecord}}' class='icon'></image> 
+                <text>交易记录</text>
+                <!-- <text><text class="c-g">{{ticket}}条</text></text>  -->
+                <image src='{{srctrangel}}' class='icon-trangel'></image>
+            </view>
+        </view>
+
+        <view class='bg card'>        
+            <view class="my-wallet tapbar border-top" bindtap='card'>
+                <image src='{{srccard}}' class='icon'></image> 
+                <text>我的绑定卡</text>
+                <image src='{{srctrangel}}' class='icon-trangel'></image>   
+            </view>       
+        </view>
+    </view>
+    </block>
+    <button wx:if="{{canIUse}}"  bindtap="bindAction" class="btn-login" hover-class="" type="{{bType}}"  open-type="getUserInfo"  bindgetuserinfo="bindGetUserInfo">{{actionText}}</button>
+    <view wx:else>请升级微信版本</view>
+</view>
