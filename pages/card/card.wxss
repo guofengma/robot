@@ -128,16 +128,16 @@
     font-size: 32rpx;
     color: #ccc;
 }
-.addCard input{
-    padding-left: 10rpx;
-    margin-left: 15rpx;
-    font-size: 28rpx;
-    display: inline-block
-}
-.addCard .form{
+
+.form{
     display: flex;
     flex: 1;
     justify-content: space-between;
     align-items: center;
 }
-
+.form input{
+    padding-left: 10rpx;
+    margin-left: 15rpx;
+    font-size: 28rpx;
+    flex: 1;
+}
