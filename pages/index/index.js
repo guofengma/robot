@@ -341,7 +341,7 @@ Page({
       // 点击保障控件，跳转到列表页
       case 3: if (app.globalData.memberId != null) {
         wx.navigateTo({
-          url: '../list/list'
+          url: '/pages/nearby/nearby'
         }); 
       }else{
         wx.showToast({

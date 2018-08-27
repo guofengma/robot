@@ -27,3 +27,18 @@
   color: #fff;
 	text-align: center;
 }
+/* 引入阿里妈妈矢量图 */
+@font-face {
+  font-family: 'iconfont';  /* project id 595004 */
+  src: url('//at.alicdn.com/t/font_595004_b464wste0dd.eot');
+  src: url('//at.alicdn.com/t/font_595004_b464wste0dd.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_595004_b464wste0dd.woff') format('woff'),
+  url('//at.alicdn.com/t/font_595004_b464wste0dd.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_595004_b464wste0dd.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont";
+  font-size: .16rem;
+  font-style: normal;
+  color: #9e9595;
+}

@@ -1,10 +1,10 @@
 {
   "pages":[
-    "pages/nearby/nearby",
+      
     "pages/index/index",
+    "pages/nearby/nearby",
     "pages/card/card",
     "pages/my/index",    
-    "pages/list/list",    
     "pages/charge/index",
     "pages/logs/logs",
     "pages/record/record",

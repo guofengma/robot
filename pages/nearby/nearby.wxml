@@ -1,26 +1,43 @@
 <!--pages/nearby/nearby.wxml-->
 <view class='nearby-wrapper'>
-    <text class='mark'>离我最近</text>
-    <view class='item-info'>
-        <view class='featuers'>
-            <text class='_title'>广告产业园6号机</text>
-            <view class='address'>鸠江区鸠江北路芜湖市国家广告产业园</view>
-            <view class='detail_wrapper'>
-                <text>27m</text>
-                <text class='line'>|</text>
-                <view class='total'>
-                    <text>0可用</text>
-                    /
-                    <text>10插座</text>
+    <view class='header'>
+        <text class='mark'>离我最近</text>
+    </view>
+    <block wx:if='{{isShow}}'>
+        <view class='item-info' wx:for="{{listData}}" wx:key='index'>
+            <view class='featuers'>
+                <text class='_title'>{{item.name}}</text>
+                <view class='address'>{{item.address}}</view>
+                <view class='detail_wrapper'>
+                    <text class='distance'>{{item.distance}} m</text>
+                    <text class='line'>|</text>
+                    <view class='total' bindtap='chong'>
+                        <text>{{item.free}}可用</text>
+                        /
+                        <text>{{item.total}}插座</text>
+                    </view>
+                </view>
+            </view>
+            <view class='destination'>
+                <view 
+                    bindtap='go' 
+                        data-marker='{{item.location}}' 
+                        data-name='{{item.name}}' 
+                        data-address='{{item.address}}'
+                >
+                    <view class='_icon'>
+                        <icon class='iconfont icon-daozhequ'></icon>
+                    </view>
+                    <text>到这去</text>
                 </view>
             </view>
         </view>
-        <view class='destination'>
-            <icon></icon>
-            <text>到这去</text>
+    </block>
+    <block wx:else>
+        <view class='nodata'>
+            <image src='{{src2}}'></image>
+            <p>暂无数据</p>
         </view>
-    </view>
-    <view class='nomore'>
-        
-    </view>
+    </block>
 </view>
+
