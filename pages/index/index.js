@@ -4,8 +4,8 @@ var app = getApp()
 Page({
   data: {
     scale: 18,
-    latitude: 0,
-    longitude: 0,
+    latitude1: 0,
+    longitude1: 0,
     la:0,
     long:0,
     markers: [],

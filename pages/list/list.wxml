@@ -1,26 +1,28 @@
 <!--pages/warn/index.wxml-->
 <block wx:if="{{true}}">
-<view class="container">
-   <view class='title'>离我最近</view>
-    <view class="listbox {{reply?'on':'off'}}"> 
-          <view wx:for="{{array}}" wx:key="{{array}}" class='list'>
-               <view class='left' bindtap='chong' data-ck='{{item.ck}}' data-free='{{item.free}}'>
-                  <view class='name' >{{item.name}}</view>   
-                  <view class='address'>{{item.address}}</view>
-                  <view class='address enable'>空闲插座：{{item.free}}个</view> 
-               </view>
-               <view class='leader' bindtap='go' data-marker='{{item.location}}' data-name='{{item.name}}' data-address='{{item.address}}' >
+    <view class="container">
+        <view class='title'>离我最近</view>
+        <view class="listbox {{reply?'on':'off'}}"> 
+            <view wx:for="{{array}}" wx:key="{{array}}" class='list'>
+                <view class='left' bindtap='chong' data-ck='{{item.ck}}' data-free='{{item.free}}'>
+                    <view class='name' >{{item.name}}</view>   
+                    <view class='address'>{{item.address}}</view>
+                    <view class='address enable'>空闲插座：{{item.free}}个</view> 
+                </view>
+                <view class='leader' 
+                        bindtap='go' data-marker='{{item.location}}' 
+                        data-name='{{item.name}}' data-address='{{item.address}}' >
                     <image src='{{src1}}'> </image>
                     <span>{{item.distance}}m</span>
-               </view> 
-         </view> 
+                </view> 
+            </view> 
+        </view>
     </view>
-</view>
 </block>
 <block wx:if="{{hidden}}">
-      <view class='nodata'>
-          <image src='{{src2}}'></image>
-          <p>暂无数据</p>
-      </view>
+    <view class='nodata'>
+        <image src='{{src2}}'></image>
+        <p>暂无数据</p>
+    </view>
 </block>  
 

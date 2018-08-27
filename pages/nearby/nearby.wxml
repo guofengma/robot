@@ -1,0 +1,26 @@
+<!--pages/nearby/nearby.wxml-->
+<view class='nearby-wrapper'>
+    <text class='mark'>离我最近</text>
+    <view class='item-info'>
+        <view class='featuers'>
+            <text class='_title'>广告产业园6号机</text>
+            <view class='address'>鸠江区鸠江北路芜湖市国家广告产业园</view>
+            <view class='detail_wrapper'>
+                <text>27m</text>
+                <text class='line'>|</text>
+                <view class='total'>
+                    <text>0可用</text>
+                    /
+                    <text>10插座</text>
+                </view>
+            </view>
+        </view>
+        <view class='destination'>
+            <icon></icon>
+            <text>到这去</text>
+        </view>
+    </view>
+    <view class='nomore'>
+        
+    </view>
+</view>
