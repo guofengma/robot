@@ -11,7 +11,7 @@
                 <view class='detail_wrapper'>
                     <text class='distance'>{{item.distance}} m</text>
                     <text class='line'>|</text>
-                    <view class='total' bindtap='chong'>
+                    <view class="total {{item.state ?'warn':'normal'}}" bindtap='chong' data-ck='{{item.ck}}' data-free='{{item.free}}'>
                         <text>{{item.free}}可用</text>
                         /
                         <text>{{item.total}}插座</text>

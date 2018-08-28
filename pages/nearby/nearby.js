@@ -15,7 +15,7 @@ Page({
             duration:1500
         })
         wx.getLocation({
-            type:'gcj02',
+            type:'wgs84',
             success: res => {
                 let { latitude, longitude } = res
                 this.setData({
@@ -31,6 +31,8 @@ Page({
             url: `${app.conf.hosts}/mp_nearByGps.action`,
             method: 'POST',
             data:{
+                // longitude: 118.416138,
+                // latitude: 31.337510
                 longitude,
                 latitude
             },

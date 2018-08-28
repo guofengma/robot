@@ -66,7 +66,14 @@ view{
     padding: 5rpx 8rpx;
     color:#fff;
     border-radius: 4rpx;
+    min-width: 190rpx;
+    text-align: center;
+}
+.normal{
     background-color: #40e399;
+}
+.warn{
+    background-color:#ff6695; 
 }
 .destination text{
     font-size: 24rpx;
@@ -101,4 +108,8 @@ view{
   width:100%;
   float: left;
   font-size: .8rem;
+}
+.distance{
+    display: inline-block;
+    min-width: 30rpx;
 }
